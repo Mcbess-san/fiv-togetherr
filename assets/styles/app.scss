@@ -1,6 +1,15 @@
 @import 'variables.scss';
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap%27');
 
 body {
-    background-color: $wild-color;
-    color: $light;
+    background-color: $light;
+    color: $medium;
+    font-family: $text-font;
+    font-size: $text-size;
+}
+
+h1, h2, h3 {
+    font-family: $text-font;
+    color: $medium;
 }
