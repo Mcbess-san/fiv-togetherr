@@ -4,20 +4,21 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container">
-		<div class="row row-cols-1 row-cols-md-3 g-4">
+	<div class="pt-3 container">
+    	<a class="d-flex justify-content-center w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_new') }}">Add a new post</a>
+		<div class="pb-5 row row-cols-1 row-cols-md-3 g-4">
 			{% for post in posts %}
 				<div class="col">
-					<div class="card post mt-3">
+					<div class="data-card post mt-3">
 						<img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
 						<div class="d-flex justify-content-between card-body">
 							<div>
 								<h5 class="card-title">{{ post.user.name }}</h5>
-								<p class="card-text">{{ post.description }}</p>
+								<p class="pt-2 card-text">{{ post.description }}</p>
 							</div>
 							<i class="bi bi-heart icon-heart"></i>
 						</div>
-						<a href="#" class="btn w-50 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+						<a href="#" class="d-flex justify-content-center btn mw-80 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
 					</div>
 				</div>
 			{% else %}
@@ -25,5 +26,4 @@
 			{% endfor %}
 		</div>
 	</div>
-	<a href="{{ path('post_new') }}">Add a new post</a>
 {% endblock %}
