@@ -53,18 +53,23 @@ header {
     height: 50vh;
 }
 
-h1 {
+.behind {
     filter: drop-shadow(0 0 0.15rem rgb(2, 2, 2));
     color: $light;
 }
 
-h2  {
+.share  {
     filter: drop-shadow(0 0 0.15rem rgb(2, 2, 2));
     color: $light;
 }
 
 .love {
+    filter: drop-shadow(0 0 0.15rem rgb(2, 2, 2));
     color: $love;
     font-style: bold;
     font-size: 40px;
+}
+
+.fiverr{
+    color: $medium;
 }
