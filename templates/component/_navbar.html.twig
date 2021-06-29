@@ -3,8 +3,9 @@
 		<a class="navbar-brand" href="#">
 			<img src="{{ asset('build/images/logo.jpg') }}" width="130" height="50" class="d-inline-block align-top" alt="logo">
 		</a>
-		<form class="d-flex">
-			<input class="form-control me-2" type="search" placeholder="# Search" aria-label="Search">
+		<form id="searchForm" method="get" class="d-flex">
+			<input class="form-control me-2" type="text" name="#" id="searchField" autocomplete="off" placeholder="# Search" aria-label="Search">
+			<ul id="autocomplete"></ul>
 			<button class="btn btn-outline-success" type="submit">Search</button>
 		</form>
 	</div>
