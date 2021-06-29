@@ -35,13 +35,13 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
     */
-    /*public function findByQuery($query)
+    public function findByQuery(string $query): array
     {
         $query = "%$query%";
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.title LIKE :query')
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.title LIKE :query')
             ->setParameter('query', $query)
-            ->orderBy('p.id', 'ASC')
+            ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult();

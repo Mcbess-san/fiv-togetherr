@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\Category;
+use App\Repository\CategoryRepository;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,7 +25,7 @@ class HomeController extends AbstractController
      */
     public function search(Request $request, CategoryRepository $categoryRepository): Response
     {
-        $query = $request->query->get('#');
+        $query = $request->query->get('q');
         if (null !== $query) {
             $categories = $categoryRepository->findByQuery($query);
         }
@@ -38,8 +38,9 @@ class HomeController extends AbstractController
      */
     public function autocomplete(Request $request, CategoryRepository $categoryRepository): Response
     {
-        $query = $request->query->get('#');
+        $query = $request->query->get('q');
 
+        $categories = [];
         if (null !== $query) {
             $categories = $categoryRepository->findByQuery($query);
         }
