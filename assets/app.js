@@ -12,7 +12,6 @@ import $ from 'jquery';
 
 // start the Stimulus application
 import './bootstrap';
+import './autocomplete';
 
 require('bootstrap');
-
-import './autocomplete'

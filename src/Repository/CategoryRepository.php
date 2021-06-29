@@ -35,7 +35,7 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function findByQuery($query)
+    /*public function findByQuery($query)
     {
         $query = "%$query%";
         return $this->createQueryBuilder('p')
