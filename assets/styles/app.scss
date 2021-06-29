@@ -13,3 +13,26 @@ h1, h2, h3 {
     font-family: $text-font;
     color: $medium;
 }
+
+.post {
+    border-radius: $post-card-border-radius;
+}
+
+.username {
+    color: $secondary;
+}
+
+.post-button {
+    background-color: $terciary;
+    color: $light;
+    border-radius: 5px;
+}
+
+.post-image {
+    border-radius: $post-image-border-radius;
+}
+
+.icon-heart {
+    font-size: $title-size;
+    color: $love;
+}
