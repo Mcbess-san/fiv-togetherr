@@ -12,6 +12,10 @@ h1, h2, h3 {
     font-family: $text-font;
 }
 
+p {
+    color: $medium;
+}
+
 .post {
     border-radius: $post-card-border-radius;
 }
@@ -59,7 +63,7 @@ h2  {
     color: $light;
 }
 
-p {
+.love {
     color: $love;
     font-style: bold;
     font-size: 40px;
