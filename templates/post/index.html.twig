@@ -8,7 +8,7 @@
         <h1>Fiv'togetherr.</h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {# for post in posts #}
-                {% else %}
+                {# else #}
                     <div class="col">
                         <div class="card post mt-3">
                             <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            {# endfor #}
         </div>
     </div>
     <a href="{{ path('post_new') }}">Add a new post</a>
