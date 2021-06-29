@@ -1,12 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home
+{% endblock %}
 
 {% block body %}
-    <h1>Fiv'togetherr.</h1>
+	<div class="banner">
+		<header class="d-flex justify-content-center align-items-center pb-3">
+        <div class="column">
+			<h1 class="h1">Behind the screen.</h1>
+            <h2 class="h2 d-flex justify-content-center align-items-center">Share, learn and </h2>
+            <p class="p d-flex justify-content-center align-items-center">LOVE</p>
+        </div>
+		</header>
+	</div>
 
-    {# for post in posts #}
-    {# else #}
-    <p>No posts here !</p>
-    {# endfor #}
+	{% for post in posts %}
+		{% else %}
+			<p>No posts here !</p>
+	{% endfor %}
 {% endblock %}

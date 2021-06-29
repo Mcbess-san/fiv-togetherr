@@ -1,17 +1,15 @@
-@import 'variables.scss';
+@import "variables.scss";
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap%27");
 
 body {
     background-color: $light;
-    color: $medium;
     font-family: $text-font;
     font-size: $text-size;
 }
 
 h1, h2, h3 {
     font-family: $text-font;
-    color: $medium;
 }
 
 .post {
@@ -35,4 +33,34 @@ h1, h2, h3 {
 .icon-heart {
     font-size: $title-size;
     color: $love;
+}
+
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("../images/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+
+h1 {
+    filter: drop-shadow(0 0 0.15rem rgb(2, 2, 2));
+    color: $light;
+}
+
+h2  {
+    filter: drop-shadow(0 0 0.15rem rgb(2, 2, 2));
+    color: $light;
+}
+
+p {
+    color: $love;
+    font-style: bold;
+    font-size: 40px;
 }
