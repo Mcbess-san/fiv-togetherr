@@ -1,36 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Post index{% endblock %}
+{% block title %}Post index
+{% endblock %}
 
 {% block body %}
-    <h1>Post index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Picture</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for post in posts %}
-            <tr>
-                <td>{{ post.id }}</td>
-                {#<td>{{ post.picture }}</td>#}
-                <td>{{ post.description }}</td>
-                <td>
-                    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('post_new') }}">Create new</a>
+    <div class="container">
+        <h1>Fiv'togetherr.</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {# for post in posts #}
+                {# else #}
+                    <div class="col">
+                        <div class="card post mt-3">
+                            <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@Username</h5>
+                                <i class="bi bi-heart icon-heart flex-end"></i>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <a href="#" class="btn w-50 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card post mt-3">
+                            <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@Username</h5>
+                                <i class="bi bi-heart icon-heart flex-end"></i>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <a href="#" class="btn w-50 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card post mt-3">
+                            <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@Username</h5>
+                                <i class="bi bi-heart icon-heart flex-end"></i>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <a href="#" class="btn w-50 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card post mt-3">
+                            <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@Username</h5>
+                                <i class="bi bi-heart icon-heart flex-end"></i>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <a href="#" class="btn w-50 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+                        </div>
+                    </div>
+                </div>
+            {# endfor #}
+        </div>
+    </div>
+    <a href="{{ path('post_new') }}">Add a new post</a>
 {% endblock %}
