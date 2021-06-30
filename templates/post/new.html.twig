@@ -3,9 +3,8 @@
 {% block title %}Add a post{% endblock %}
 
 {% block body %}
-    <h1>Add a new post</h1>
+    <h1 class="fiverr py-3 text-center">Add a new post</h1>
 
     {{ include('post/_form.html.twig') }}
 
-    <a href="{{ path('post_index') }}">Back to all the posts</a>
 {% endblock %}
