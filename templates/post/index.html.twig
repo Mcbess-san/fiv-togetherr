@@ -5,11 +5,13 @@
 
 {% block body %}
 	<div class="pt-3 container">
-    	<a class="d-flex justify-content-center w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_new') }}">Add a new post</a>
+		<div class="d-flex justify-content-center">
+			<a class="w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_new') }}">Add a new post</a>
+		</div>
 		<div class="pb-5 row row-cols-1 row-cols-md-3 g-4">
 			{% for post in posts %}
 				<div class="col">
-					<div class="data-card post mt-3">
+					<div class="data-card shadow bg-white rounded-5 p-0 m-0 post">
 						<img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
 						<div class="d-flex justify-content-between card-body">
 							<div>
@@ -18,7 +20,7 @@
 							</div>
 							<i class="bi bi-heart icon-heart"></i>
 						</div>
-						<a href="#" class="d-flex justify-content-center btn mw-80 mt-1 mb-3 mx-3 post-button">Start a conversation</a>
+						<a href="#" class="d-flex justify-content-center btn mw-80 mt-3 mb-3 mx-3 post-button">Start a conversation</a>
 					</div>
 				</div>
 			{% else %}
