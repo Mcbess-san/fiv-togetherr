@@ -21,12 +21,11 @@ class UserController extends AbstractController
             ->getRepository(User::class)
             ->findOneBy(['id' => $id]);
 
-            if (!$user) {
-                throw $this->createNotFoundException(
-                    'No user with id : '.$id.' found in user\'s table.'
-                );
-            }
-        
+        if (!$user) {
+            throw $this->createNotFoundException(
+                'No user with id : ' . $id . ' found in user\'s table.'
+            );
+        }
         $posts = $this->getDoctrine()
             ->getRepository(Post::class)
             ->findBy(['user' => $id]);
@@ -36,5 +35,4 @@ class UserController extends AbstractController
             'posts' => $posts
         ]);
     }
-
 }
