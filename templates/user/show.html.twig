@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome on {{ user.name }} Profile !{% endblock %}
+
+{% block body %}
+<div class="pt-3 container">
+
+    <div class="example-wrapper">
+        <h1>{{ user.name }} !</h1>
+    </div>
+
+    <div class="pb-5 row row-cols-1 row-cols-md-3 g-4">
+        {% for post in posts %}
+        <div class="col">
+            <div class="data-card shadow bg-white rounded-5 p-0 m-0 post">
+                <img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
+                <div class="d-flex justify-content-between card-body">
+                    <div>
+                        <h5 class="card-title">{{ post.user.name }}</h5>
+                        <p class="pt-2 card-text">{{ post.description }}</p>
+                    </div>
+                    <i class="bi bi-heart icon-heart"></i>
+                </div>
+                <a href="#" class="d-flex justify-content-center btn mw-80 mt-3 mb-3 mx-3 post-button">Start a
+                    conversation</a>
+            </div>
+        </div>
+        {% else %}
+        <p>No post here !</p>
+        {% endfor %}
+    </div>
+    <div class="d-flex justify-content-center pb-3">
+        <a class="w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_index') }}">Return</a>
+    </div>
+</div>
+{% endblock %}
