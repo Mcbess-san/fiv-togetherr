@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/user/{id}", name="show")
+     * @Route("/user/{id}", name="user_show")
      */
     public function show(int $id): Response
     {
