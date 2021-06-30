@@ -5,8 +5,8 @@
 
 {% block body %}
 	<div class="pt-3 container">
-		<div class="d-flex justify-content-center">
-			<a class="w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_new') }}">Add a new post</a>
+		<div class="d-flex py-3 justify-content-center">
+			<a class="w-50 btn mt-1 mb-3 mx-3 post-button" href="{{ path('post_new') }}">+ Add a new post</a>
 		</div>
 		<div class="pb-5 row row-cols-1 row-cols-md-3 g-4">
 			{% for post in posts %}

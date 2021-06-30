@@ -1,6 +1,23 @@
-{{ form_start(form) }}
-        {{ form_row(form.pictureFile) }}
-        {{ form_row(form.category) }}
-        {{ form_row(form.description) }}
-        <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<section class="container">
+	<div class="bg-info shadow p-3 mb-5 rounded form-group row mt-sm-0 px-xs-0 py-sm-0">
+		<div class="justify-content-start">
+			{{ form_start(form) }}
+			<div class="form-group pt-5 col col-lg-6 col-md-12 mx-auto">
+				{{ form_row(form.pictureFile, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group pt-5 col col-lg-6 col-md-12 mx-auto">
+				{{ form_row(form.category, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group pt-5 col col-lg-6 col-md-12 mx-auto">
+				{{ form_row(form.description, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group d-flex justify-content-center t-5 col col-lg-6 col-md-12 mx-auto">
+				<button class="d-flex justify-content-center btn mw-80 mt-3 mb-3 mx-3 post-button">{{ button_label|default('Save') }}</button>
+			</div>
+			{{ form_end(form) }}
+		</div>
+		<div class="form-group d-flex justify-content-center t-5 col col-lg-6 col-md-12 mx-auto">
+			<a class="btn w-50 mt-3 mb-3 mx-3 post-button" href="{{ path('post_index') }}">Back to posts</a>
+		</div>
+	</div>
+</section>
