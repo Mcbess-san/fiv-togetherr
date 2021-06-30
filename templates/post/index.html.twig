@@ -15,7 +15,7 @@
 						<img src="{{ asset('build/images/tableau.jpg') }}" class="card-img-top post-image" alt="...">
 						<div class="d-flex justify-content-between card-body">
 							<div>
-								<h5 class="card-title"><a href="{{ path('user_show', {id: post.user.id}) }}">{{ post.user.name }}</a></h5>
+								<h5 class="card-title"><a href="{{ path('user_show', {id: post.user.id}) }}" style="text-decoration:none">{{ post.user.name }}</a></h5>
 								<p class="pt-2 card-text">{{ post.description }}</p>
 							</div>
 							<i class="bi bi-heart icon-heart"></i>
